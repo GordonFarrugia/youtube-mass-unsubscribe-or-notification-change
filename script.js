@@ -26,9 +26,6 @@
                         console.log(`Turned off notifications for: ${channel.querySelector('#channel-title').innerText}`);
                     }
                 }
-
-                //test
-                break;
             }
         } catch (error) {
             console.error(`Error turning off channel notifications for channel: ${channel.querySelector('#channel-title').innerText}`, error);
@@ -38,9 +35,9 @@
     const UnsubscribeAll = async (channels) => {
         try {
             for (var channel of channels) {
-                var subBtn = channel.querySelector('ytd-subscribe-button-renderer button');
-                if (subBtn) {
-                    subBtn.click();
+                var unsubBtn = channel.querySelector('ytd-subscribe-button-renderer button');
+                if (unsubBtn) {
+                    unsubBtn.click();
                     await wait(DELAY);
 
                     const confirmBtn = document.querySelector('yt-confirm-dialog-renderer #confirm-button button');
@@ -51,9 +48,6 @@
                         console.log(`Unsubscribed from channel: ${channel.querySelector('#channel-title').innerText}`);
                     }
                 }
-
-                //test
-                break;
             }
         } catch (error) {
             console.error(`Error unsubscribing from channel: ${channel.querySelector('#channel-title').innerText}`, error);
