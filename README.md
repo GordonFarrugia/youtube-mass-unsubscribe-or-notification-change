@@ -11,7 +11,8 @@ A JS script developed to automate the process of unsubscribing or changing notif
 2. Access the browser's Developer Tools:
    - Right-click on the page and select **Inspect**, or Press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Option+I` (Mac).
 3. Click on the **Console** tab within the Developer Tools panel.
-4. Ensure the value of `SELECTED_OPTION` at the top of the script is set to your preferred functionality:
+4. Paste the contents of [`script.js`](./script.js) into the console.
+5. Ensure the value of `SELECTED_OPTION` at the top of the script is set to your preferred functionality:
    
    ```javascript
    //Sets channel notifications for all videos
@@ -26,5 +27,4 @@ A JS script developed to automate the process of unsubscribing or changing notif
    //Unsubscribes from all channels (default setting)
    const SELECTED_OPTION = OPTION_UNSUBSCRIBE;
    ```
-5. Paste the contents of [`script.js`](./script.js) into the console.
 6. Press `Enter` to execute the script.
